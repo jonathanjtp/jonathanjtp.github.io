@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Build - BuildThreads</title>
+    <link rel="stylesheet" href="styles-form.css">
+	<script src="script.js"></script>
+</head>
+<body onload="showLastModified()">
+    <!-- Created by Jonathan Paniagua -->
+    <header>
+        <h1>Submit Your Build Thread</h1>
+        <p>Share your car</p>
+    </header>
+ 
+ 	<nav>
+		<ul>
+			<li><a href="index.html">Home</a>
+</li>
+			<li><a href="#recent-updates">Recent Updates</a>
+</li>
+			<li><a href="#community">Community</a></li>
+            <li><a href="Submit-Build-Copy3.html">Submit Your Build</a></li>
+            <li><a href="About.html">Contact/About</a></li>
+		</ul>
+	</nav>
+ 
+    <main>
+        <section>
+            <h2>Share Your Build With</h2>
+            <p>We love seeing what people are building. Fill out the form below to submit your build thread.</p>
+            
+            <form action="submit_build.php" method="post">
+                
+               
+                <fieldset>
+                    <legend>Your Information</legend>
+                    
+                    <label for="builder-name">Your Name:</label>
+                    <input type="text" id="builder-name" name="builder-name" required>
+                    
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" name="email" required>
+                    
+                    <label for="location">Location (City, State):</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Atlanta, GA" required>
+                </fieldset>
+                
+                
+                <fieldset>
+                    <legend>Vehicle Details</legend>
+                    
+                    <label for="vehicle">Vehicle (Year, Make, Model):</label>
+                    <input type="text" id="vehicle" name="vehicle" placeholder="e.g., 2015 Subaru WRX STI" required>
+                    
+                    <label for="year-range">Vehicle Year Range:</label>
+                    <select id="year-range" name="year-range" required>
+                        <option value="">Select Year Range</option>
+                        <option value="2020-2024">2020-2024</option>
+                        <option value="2015-2019">2015-2019</option>
+                        <option value="2010-2014">2010-2014</option>
+                        <option value="2005-2009">2005-2009</option>
+                        <option value="2000-2004">2000-2004</option>
+                        <option value="1990-1999">1990-1999</option>
+                        <option value="1980-1989">1980-1989</option>
+                        <option value="1970-1979">1970-1979</option>
+                        <option value="pre-1970">Before 1970</option>
+                    </select>
+                </fieldset>
+                
+                
+                <fieldset>
+                    <legend>Build Type (Select One)</legend>
+                    
+                    <input type="radio" id="street-daily" name="build-type" value="street-daily" required>
+                    <label for="street-daily">Street / Daily Driver</label>
+                    
+                    <input type="radio" id="show" name="build-type" value="show">
+                    <label for="show">Show Car</label>
+                    
+                    <input type="radio" id="track" name="build-type" value="track">
+                    <label for="track">Track / Performance</label>
+                    
+                    <input type="radio" id="drift" name="build-type" value="drift">
+                    <label for="drift">Drift</label>
+                    
+                    <input type="radio" id="restoration" name="build-type" value="restoration">
+                    <label for="restoration">Restoration</label>
+                </fieldset>
+                
+                
+                <fieldset>
+                    <legend>Modification Categories (Check All That Apply)</legend>
+                    
+                    <input type="checkbox" id="engine" name="modifications" value="engine">
+                    <label for="engine">Engine / Performance</label>
+                    
+                    <input type="checkbox" id="suspension" name="modifications" value="suspension">
+                    <label for="suspension">Suspension</label>
+                    
+                    <input type="checkbox" id="wheels-tires" name="modifications" value="wheels-tires">
+                    <label for="wheels-tires">Wheels / Tires</label>
+                    
+                    <input type="checkbox" id="exhaust" name="modifications" value="exhaust">
+                    <label for="exhaust">Exhaust</label>
+                    
+                    <input type="checkbox" id="exterior" name="modifications" value="exterior">
+                    <label for="exterior">Exterior / Body</label>
+                    
+                    <input type="checkbox" id="interior" name="modifications" value="interior">
+                    <label for="interior">Interior</label>
+                </fieldset>
+                
+               
+                <fieldset>
+                    <legend>Build Description</legend>
+                    
+                    <label for="build-story">Tell Us About Your Build:</label>
+                    <textarea id="build-story" name="build-story" rows="10" placeholder="Describe your build, modifications, future plans, and any interesting stories..." required></textarea>
+                </fieldset>
+                
+                
+                <div class="submit-section">
+                    <input type="submit" value="Submit My Build Thread">
+                </div>
+            </form>
+        </section>
+    </main>
+ 
+    <footer>
+        <p>Contact: Jpaniagua@studentclayton.edu</p>
+        <p>Assignment Due Date: April 30, 2026</p>
+        <p>Copyright 2026 BuildThreads. All rights reserved. A place for car enthusiasts, by car enthusiasts.</p>
+		 <div id="lastModified"></div>
+    </footer>
+</body>
+</html>
